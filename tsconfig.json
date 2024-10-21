@@ -32,11 +32,11 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "cccc/types/**/*.ts"
+    "keyzilla.config.ts"
   ],
   "exclude": [
     "node_modules"
-    
+
   ]
 }
 // dqdqdqdq

@@ -6,7 +6,7 @@ export const config = Config({
     envType: "org"
   },
   credentials: {
-    email: process.env.EMAIL,
-    secretCode: process.env.SECRET_CODE,
+    email: process.env.EMAIL!,
+    secretCode: process.env.SECRET_CODE!,
   },
 });
