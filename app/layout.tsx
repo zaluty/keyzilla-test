@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Head from 'next/head'; // Import Head from next/head
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,10 +26,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <Head>
+  
+        <meta name="description" content={metadata.description || "Default description"} />
+      </Head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <main>{children}</main> // Wrap children in main for semantic HTML
+        <footer>
+          {/* Footer content here */}
+          © 2023 Your Company
+        </footer>
       </body>
     </html>
   );
