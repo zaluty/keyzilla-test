@@ -27,15 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-  
+
         <meta name="description" content={metadata.description || "Default description"} />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <main>{children}</main> // Wrap children in main for semantic HTML
-        <footer>
-          {/* Footer content here */}
-          © 2023 Your Company
-        </footer>
+         {children}
       </body>
     </html>
   );
